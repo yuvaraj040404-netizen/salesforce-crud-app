@@ -36,7 +36,7 @@ public class SecurityConfig {
                 )
 
                 .oauth2Login(oauth2 -> oauth2
-                        .defaultSuccessUrl("https://vercel.com/yuvaraj16/salesforce-frontend/GMV2rhSNNXeLfMXMGZjbvh4AV6rK", true)
+                        .defaultSuccessUrl("https://salesforce-frontend-git-main-yuvaraj16.vercel.app/", true)
                 );
 
         return http.build();
@@ -47,7 +47,7 @@ public class SecurityConfig {
 
         CorsConfiguration configuration = new CorsConfiguration();
         configuration.setAllowedOrigins(
-                List.of("https://vercel.com/yuvaraj16/salesforce-frontend/GMV2rhSNNXeLfMXMGZjbvh4AV6rK")
+                List.of("https://salesforce-frontend-git-main-yuvaraj16.vercel.app/")
         );
         configuration.setAllowedMethods(
                 List.of("GET", "POST", "PATCH", "DELETE", "OPTIONS")
