@@ -2,10 +2,12 @@ FROM eclipse-temurin:21-jdk
 
 WORKDIR /app
 
-COPY webapp/pom.xml .
-COPY webapp/src src
+COPY pom.xml .
+COPY mvnw .
+COPY .mvn .mvn
+COPY src src
 
-RUN apt-get update && apt-get install -y maven
-RUN mvn clean package -DskipTests
+RUN chmod +x mvnw
+RUN ./mvnw clean package -DskipTests
 
 CMD ["sh", "-c", "java -jar target/*.jar"]
