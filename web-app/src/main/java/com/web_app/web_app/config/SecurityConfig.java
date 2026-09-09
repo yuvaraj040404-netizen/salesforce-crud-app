@@ -47,7 +47,7 @@ public class SecurityConfig {
 
         CorsConfiguration configuration = new CorsConfiguration();
         configuration.setAllowedOrigins(
-                List.of("https://salesforce-frontend-bgnbq27ze-yuvaraj16.vercel.app/")
+                List.of("https://salesforce-frontend-bgnbq27ze-yuvaraj16.vercel.app")
         );
         configuration.setAllowedMethods(
                 List.of("GET", "POST", "PATCH", "DELETE", "OPTIONS")
